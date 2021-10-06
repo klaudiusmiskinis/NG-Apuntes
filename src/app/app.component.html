@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contador: {{ numero }}</title>
+</head>
+<body>
+  <h1>{{ title }}</h1>
+  <h1>El numero que sumará o restará es el: {{base}}</h1>
+  <button (click)='calcular(base)'>+ {{base}}</button>
+  <span>{{ numero }}</span>
+  <button (click)='calcular(-base)'>- {{base}}</button>
+</body>
+</html>
