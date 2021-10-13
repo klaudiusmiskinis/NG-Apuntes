@@ -7,7 +7,6 @@ import { Contador } from './contador/contador.component';
 @NgModule({
   declarations: [
     AppComponent,
-    Contador
   ],
   imports: [
     BrowserModule
