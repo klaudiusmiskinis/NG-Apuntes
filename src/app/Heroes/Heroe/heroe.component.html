@@ -1,0 +1,12 @@
+
+    <div class="container-fluid text-center text-light bg-dark">
+        <p>{{ nombre }}</p>
+        <p>{{ edad }}</p>
+        <p>{{ concatenar() }}</p>
+        <p>{{ nombreMayusculas() }}</p>
+        <div class="inline d-flex justify-content-center p-5">
+            <button class="btn btn-primary mx-2"  (click)="setNombre('Paco')">Cambiar Nombre</button>
+            <button class="btn btn-primary mx-2"  (click)="setEdad(37)">Cambiar Edad</button>
+            <button class="btn btn-primary mx-2"  (click)="porDefecto()">Heroe por defecto</button>
+        </div>
+    </div>
