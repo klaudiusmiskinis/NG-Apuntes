@@ -1,0 +1,27 @@
+<div class="container-fluid bg-dark pb-5 text-light text-center">
+    <ul class="list-group">
+        <li (click) = "seleccionHeroe(heroe)" class="list-group-item" *ngFor="let heroe of heroes">{{ heroe }}</li>
+    </ul>
+
+    <div class="row">
+        <div class="col">
+            <p *ngIf="seleccionado != ''; else noseleccionado">Heroe elegido: {{ seleccionado }}</p>
+            <ng-template #noseleccionado>
+                <p>No se ha seleccionado ningún héroe.</p>
+            </ng-template>
+            <button class="btn btn-primary" (click) = "porDefecto()" >Por Defecto</button>
+        </div>
+        <div class="col">
+            <p *ngIf="borrado != ''; else noborrado">Se ha borrado: {{borrado}}</p>
+            <ng-template #noborrado>
+                <p>No has borrado ningun heroe todavia</p>
+            </ng-template>
+            <button class="btn btn-primary mt-2" (click) = "borrarHeroe()" >Borrar Heroe</button>
+        </div>
+    </div>
+
+   
+
+    
+    
+</div>
