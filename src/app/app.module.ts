@@ -2,15 +2,17 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 // Componentes
 import { HeroeComponent } from './Heroes/Heroe/heroe.component';
+import { ListadoComponent } from './Heroes/listado/listado.component';
 
 @NgModule({
   declarations: [
-    HeroeComponent
+    HeroeComponent,
+    ListadoComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [HeroeComponent]
+  bootstrap: [HeroeComponent, ListadoComponent]
 })
 export class AppModule {  }
