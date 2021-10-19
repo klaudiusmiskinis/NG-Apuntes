@@ -2,9 +2,9 @@ import { Component } from "@angular/core";
 
 @Component ({
     selector: 'contador-component',
-    templateUrl: 'contador.component.html',
-    styleUrls: ['./app.component.css']
+    templateUrl: 'contador.component.html'
 })
+
 export class Contador {
     title: string = 'Contador app';
     numero: number = 0;
