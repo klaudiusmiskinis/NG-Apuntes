@@ -5,15 +5,15 @@
     </ul>
     <div class="row">
         <div class="col">
-            <p *ngIf="seleccionado != ''; else sinseleccionar">Heroe elegido: {{ seleccionado }}</p>
-            <ng-template #sinseleccionar>
+            <p *ngIf="seleccionado != ''; else templateSeleccionado">Heroe elegido: {{ seleccionado }}</p>
+            <ng-template #templateSeleccionado>
                 <p>No se ha seleccionado ningún héroe.</p>
             </ng-template>
             <button class="btn btn-primary" (click) = "porDefecto()" >Por Defecto</button>
         </div>
         <div class="col">
-            <p *ngIf="eliminado != ''; else noborrado">Se ha eliminado: {{eliminado}}</p>
-            <ng-template #noborrado>
+            <p *ngIf="eliminado != ''; else templateEliminado">Se ha eliminado: {{eliminado}}</p>
+            <ng-template #templateEliminado>
                 <p>No has eliminado ningun heroe todavia</p>
             </ng-template>
             <button class="btn btn-primary" (click) = "borrarHeroe()" >Borrar Heroe</button>
