@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-listado',
+  selector: 'heroe-listado',
   templateUrl: './listado.component.html',
   styleUrls: ['./listado.component.css']
 })
@@ -19,7 +19,7 @@ export class ListadoComponent {
     }
     this.heroes.splice(0, 1);
   }
-  seleccionHeroe(heroe: string): void {
+  seleccionarHeroe(heroe: string): void {
     this.seleccionado = heroe;
   }
   porDefecto(): void{
