@@ -1,12 +1,14 @@
-
-    <div class="container-fluid text-center text-light bg-dark">
-        <p>{{ nombre }}</p>
-        <p>{{ edad }}</p>
-        <p>{{ concatenar() }}</p>
-        <p>{{ nombreMayusculas() }}</p>
-        <div class="inline d-flex justify-content-center p-5">
-            <button class="btn btn-primary mx-2"  (click)="setNombre('Paco')">Cambiar Nombre</button>
-            <button class="btn btn-primary mx-2"  (click)="setEdad(37)">Cambiar Edad</button>
-            <button class="btn btn-primary mx-2"  (click)="porDefecto()">Heroe por defecto</button>
+    
+    <h3 class="text-center bg-dark text-light pb-3">Ejercicio 1</h3>
+    <div class="container-fluid text-center text-light bg-dark p-3">
+        <input class="text-center my-2 form-control" disabled value="{{ nombre }}">
+        <input class="text-center my-2 form-control" disabled value="{{ edad }}">
+        <input class="text-center my-2 form-control" disabled value="{{ concatenar() }}">
+        <input class="text-center my-2 form-control" disabled value="{{ nombreMayusculas() }}">
+        <div class="vstack gap-2 col-md-5 p-3 mx-auto">
+            <button class="btn btn-primary mx-2" (click)="setNombre('Paco')">Cambiar Nombre</button>
+            <button class="btn btn-primary mx-2" (click)="setEdad(37)">Cambiar Edad</button>
+            <button class="btn btn-primary mx-2" (click)="porDefecto()">Heroe por defecto</button>
         </div>
     </div>
+    <hr class="py-3" style="border-top: 1px solid white; background-color: #212529; margin: 0; opacity: 1;">

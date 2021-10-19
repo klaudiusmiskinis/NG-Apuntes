@@ -8,14 +8,14 @@ import { Component, OnInit } from '@angular/core';
 
 export class ListadoComponent {
   heroes: string[] = ['Linterna Verde', 'Mojo', 'Groot', 'Spider-Ham', 'MODOK'];
-  borrado: string = "";
+  eliminado: string = "";
   seleccionado: string = "";
 
   borrarHeroe(): void{
     if(this.heroes.length == 0){
-      this.borrado = '';
+      this.eliminado = '';
     } else{
-      this.borrado = this.heroes[0];
+      this.eliminado = this.heroes[0];
     }
     this.heroes.splice(0, 1);
   }
