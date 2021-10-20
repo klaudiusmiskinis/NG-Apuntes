@@ -7,6 +7,7 @@ import { ListadoComponent } from './Heroes/listado/listado.component';
 
 @NgModule({
   declarations: [
+    AppComponent,
     HeroeComponent,
     ListadoComponent
   ],
