@@ -3,16 +3,16 @@
     <ul class="list-group text-light text-center">
         <li class="bg-dark m-1 text-light border border-light list-group-item" *ngFor="let personaje of Personajes">Nombre: {{ personaje.nombre }}, Pesonaje: {{ personaje.poder }}</li>
     </ul>
-    <form ng-submit="addPersonaje()">
+    <form #formulario="ngForm" (ngSubmit)="addPersonaje(formulario)">
         <h6 class="mt-3 border-bottom text-center">Mini-Formulario</h6>
         <div class="my-3 row justify-content-center">
             <!-- NOMBRE -->
                 <div class="col-sm-5">
-                    <input type="nombre" class="form-control" id="nombre" placeholder="Introduce el nombre de tu personaje">
+                    <input type="text" class="form-control" id="nombre" placeholder="Introduce el nombre de tu personaje" ngModel required>
                 </div>
                 <!-- PODER -->
                 <div class="col-sm-5">
-                    <input type="nombre" class="form-control" id="nombre" placeholder="Introduce el poder de tu personaje">
+                    <input type="number" min="0" max="500" class="form-control" id="poder" placeholder="Introduce el poder de tu personaje" ngModel required>
                 </div>
                 <!-- SUBMIT -->
                 <div class="col-sm-2">
