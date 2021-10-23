@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-main-page',
@@ -8,7 +9,19 @@ import { Component } from '@angular/core';
 
 export class MainPageComponent {
   Personajes: Personaje[] = inicializarPersonajes();
-}
+
+  //METODO ENCARGADO DE INTERPRETAR EL FORM Y AÑADIR EL PERSONAJE
+  addPersonaje(formulario: NgForm) {
+    //CREANDO OBJETO CON LOS DATOS DEL FORM
+    let personaje: Personaje = {
+      nombre: formulario.value.nombre,
+      poder: formulario.value.poder
+    };
+
+    //AÑADIENDO PERSONAJE AL ARRAY
+    this.Personajes.push(personaje);
+  };
+};
 
 // INTERFACE PERSONAJE
 interface Personaje {
