@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class MainPageComponent {
-  Personajes: Personaje[]
+  Personajes: Personaje[] = [];
   constructor() { }
 }
 
