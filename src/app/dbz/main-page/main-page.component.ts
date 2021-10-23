@@ -18,6 +18,8 @@ export class MainPageComponent {
       poder: formulario.value.poder
     };
 
+    console.log(formulario.value)
+
     //AÑADIENDO PERSONAJE AL ARRAY
     this.Personajes.push(personaje);
   };
