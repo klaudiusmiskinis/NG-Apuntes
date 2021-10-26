@@ -1,0 +1,18 @@
+<form #formulario="ngForm" (ngSubmit)="addPersonaje(formulario)">
+    <h6 class="mt-3 border-bottom text-center">Añadir personaje</h6>
+    <div class="my-3 row justify-content-center">
+        <!-- NOMBRE -->
+        <div class="col-sm-9">
+            <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Introduce el nombre" ngModel>
+        </div>
+        <!-- PODER -->
+        <div class="col-sm-1">
+            <input type="number" name="poder" min="0" max="500" class="form-control" id="poder" placeholder="Poder" ngModel>
+        </div>
+        <!-- SUBMIT -->
+        <div class="col-sm-2">
+            <button type="submit" class="btn btn-primary">Añadir personaje</button>
+        </div>
+    </div>
+</form>
+<hr class="py-3" style="border-top: 1px solid var(--bs-primary); background-color: #212529; margin: 0; opacity: 1;">
