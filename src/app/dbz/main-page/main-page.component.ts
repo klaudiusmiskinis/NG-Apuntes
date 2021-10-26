@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Personaje } from '../interfaces/dbz.interfaces';
 
 @Component({
   selector: 'app-main-page',
@@ -18,18 +19,10 @@ export class MainPageComponent {
       poder: formulario.value.poder
     };
 
-    console.log(formulario.value)
-
     //AÑADIENDO PERSONAJE AL ARRAY
     this.Personajes.push(personaje);
   };
 };
-
-// INTERFACE PERSONAJE
-interface Personaje {
-  nombre: string;
-  poder: number;
-}
 
 // FUNCION PARA INICIALIZAR
 function inicializarPersonajes() {
@@ -68,6 +61,7 @@ function inicializarPersonajes() {
     poder: 310
   }
   Personajes.push(personaje);
+  
   return Personajes;
 }
 
